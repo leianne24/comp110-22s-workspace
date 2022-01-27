@@ -47,9 +47,9 @@ if len (word) == 5:
         if count == 0:
             print("No instances of " + letter + " found in " + word)
         if count == 1:
-            print( (str(count) + " instances of " + letter + " found in " + word))
-        else:
             print( (str(count) + " instance of " + letter + " found in " + word))
+        else:
+            print( (str(count) + " instances of " + letter + " found in " + word))
 
 print 
 __author__ = "730308277"
