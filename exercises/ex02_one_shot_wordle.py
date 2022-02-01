@@ -15,9 +15,9 @@ while len(guess) != len(word):
 emoji: str = "" 
 index: int = 0
 if word == guess:
-        print ("Woo! You got it!")
+    print("Woo! You got it!")
 else:
-    print ("Not quite. Play again soon!")
+    print("Not quite. Play again soon!")
 while index < len(guess):
     if word[index] == guess[index]:
         emoji = emoji + green_box
