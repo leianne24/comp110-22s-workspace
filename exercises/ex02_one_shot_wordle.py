@@ -2,9 +2,9 @@
 
 __author__ = "730308277"
 
-WHITE_BOX: str = "\U00002B1C"
-GREEN_BOX: str = "\U0001F7E9"
-YELLOW_BOX: str = "\U0001F7E8"
+white_box: str = "\U00002B1C"
+green_box: str = "\U0001F7E9"
+yellow_box: str = "\U0001F7E8"
 
 guess: str = input("What is your 6-letter guess? ")
 word: str = "python"
@@ -20,7 +20,7 @@ else:
     print ("Not quite. Play again soon!")
 while index < len(guess):
     if word[index] == guess[index]:
-        emoji = emoji + GREEN_BOX
+        emoji = emoji + green_box
     else:
         j: int = 0
         bool_found: bool = False
@@ -29,29 +29,8 @@ while index < len(guess):
                 bool_found = True
             j = j + 1
         if bool_found == True:
-            emoji = emoji + YELLOW_BOX
+            emoji = emoji + yellow_box
         else:
-            emoji = emoji + WHITE_BOX
+            emoji = emoji + white_box
     index = index + 1
 print(emoji)
-
-
-
-
-
-
-"""
-while len(guess) == len(word):
-    WHITE_BOX: str = "\U00002B1C"
-    GREEN_BOX: str = "\U0001F7E9"
-    YELLOW_BOX: str = "\U0001F7E8"
-    index: int = 0
-    emoji: str = ""     
-    while index <= len(word):
-        while word[index] == guess[index]:
-            emoji: str = GREEN_BOX
-            print(emoji)
-        while word[index] != guess[index]:
-            index = index + 1
-            emoji: str = WHITE_BOX
-"""
