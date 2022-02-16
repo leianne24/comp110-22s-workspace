@@ -17,34 +17,51 @@ leo.speed(50)
 # leo.forward(50)
 
 leo.penup()
-leo.goto(-250, -150)
+leo.goto(310, 260)
 leo.pendown()
 
 i: int = 0
+leo.begin_fill()
 while (i < 3):
-    leo.begin_fill()
     leo.color("green", "yellow")
     leo.color(99, 204, 250)
     leo.forward(115)
     leo.left(120)
-    leo.end_fill()
     i = i + 1
+leo.end_fill()
 
 
 
-# bob: Turtle = Turtle ()
+bob: Turtle = Turtle ()
 # bob.color("pink", "purple")
 # bob.speed(10000000)
 # bob.penup()
 # bob.goto(45, 60)
 # bob.pendown()
 # i: int = 0
-# while (i < 20):
+# while (i < 121):
 #     side_length: float = 300
 #     bob.forward(side_length)
 #     bob.left(121)
 #     side_length = side_length * 0.97
 #     i += 1
+
+
+
+bob.speed(10000000)
+bob.penup()
+bob.goto(-45, 60)
+bob.pendown()
+i: int = 0
+bob.begin_fill()
+bob.color("yellow")
+while (i < 36):
+    side_length: float = 100
+    bob.forward(side_length)
+    bob.left(175)
+    side_length = side_length * 0.97
+    i += 1
+
 
 done()
 
