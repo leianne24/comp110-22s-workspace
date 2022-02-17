@@ -50,7 +50,7 @@ bob: Turtle = Turtle ()
 
 bob.speed(10000000)
 bob.penup()
-bob.goto(-45, 60)
+bob.goto(-40, 60)
 bob.pendown()
 i: int = 0
 bob.begin_fill()
