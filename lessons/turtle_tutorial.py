@@ -33,18 +33,18 @@ leo.end_fill()
 
 
 bob: Turtle = Turtle ()
-# bob.color("pink", "purple")
-# bob.speed(10000000)
-# bob.penup()
-# bob.goto(45, 60)
-# bob.pendown()
-# i: int = 0
-# while (i < 121):
-#     side_length: float = 300
-#     bob.forward(side_length)
-#     bob.left(121)
-#     side_length = side_length * 0.97
-#     i += 1
+bob.color("pink", "purple")
+bob.speed(10000000)
+bob.penup()
+bob.goto(45, 60)
+bob.pendown()
+i: int = 0
+while (i < 121):
+    side_length: float = 300
+    bob.forward(side_length)
+    bob.left(121)
+    side_length = side_length * 0.97
+    i += 1
 
 
 
