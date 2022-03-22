@@ -38,7 +38,7 @@ print(schools)
 # inverting a dictionary
 invert_schools: dict[int,str]
 invert_schools = dict()
-invert_schools [19400] = "UNC"
+# invert_schools [19400] = "UNC"
 
 
 # demonstration of dictionary literals
