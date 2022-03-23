@@ -50,7 +50,7 @@ def head(not_m: dict[str, list[str]], rows: int) -> dict[str, list[str]]:
     for column in not_m:
         first_n: list[str] = []
         i = 0
-        while i < rows-1:
+        while i < rows - 1:
             item = not_m[column][i]
             first_n.append(item)
             i += 1
