@@ -46,11 +46,12 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
 def head(not_m: dict[str, list[str]], rows: int) -> dict[str, list[str]]:
     """A function to check the first few rows of a table to make sure we aren't screwing up too badly."""
     result: dict[str, list[str]] = {}
-    i: int = 0
     for column in not_m:
         first_n: list[str] = []
-        i = 0
-        while i < rows - 1:
+        i: int = 0
+        if len(not_m[column]) < rows:
+            rows = len(not_m[column])
+        while i < rows:
             item = not_m[column][i]
             first_n.append(item)
             i += 1
@@ -76,14 +77,12 @@ def concat(set_one: dict[str, list[str]], set_two: dict[str, list[str]]) -> dict
     """Produce one table by combining two column based tables."""
     result: dict[str, list[str]] = {}
     for column in set_one:
-        col_list = []
-        col_list.append(column)
-        result[column] = col_list
-        for column_b in set_two:
-            if result == column_b: 
-                result[column] = result[column] + set_two[column_b]
-            else:
-                result[column_b] = set_two[column_b]
+        result[column] = set_one[column]
+    for column in set_two:
+        if result == column: 
+            result[column] += set_two[column]
+        else:
+            result[column] = set_two[column]
     return result
 
 
