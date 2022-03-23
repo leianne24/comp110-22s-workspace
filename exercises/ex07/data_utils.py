@@ -25,6 +25,7 @@ def read_csv_rows(filename: str) -> list[dict[str, str]]:
 
 
 def column_values(table: list[dict[str, str]], column: str) -> list[str]:
+    """We want to take a list and turn it into a colunm, with it's name as the second parameter."""
     result: list[str] = []
     for row in table:
         item: str = row[column]
@@ -49,7 +50,7 @@ def head(not_m: dict[str, list[str]], rows: int) -> dict[str, list[str]]:
     for column in not_m:
         first_n: list[str] = []
         i = 0
-        while i < rows:
+        while i < rows-1:
             item = not_m[column][i]
             first_n.append(item)
             i += 1
