@@ -36,7 +36,7 @@ schools["NCSU"] += 200
 print(schools)
 
 # inverting a dictionary
-invert_schools: dict[int,str]
+invert_schools: dict[int, str]
 invert_schools = dict()
 # invert_schools [19400] = "UNC"
 
@@ -44,11 +44,11 @@ invert_schools = dict()
 # demonstration of dictionary literals
 
 # empty dictionary literal
-schools = {} # same as dict()
+schools = {}  # same as dict()
 print(schools)
 
 schools = {"UNC": 19400, "Duke": 6717}
-print (schools)
+print(schools)
 
 # what happens when a key does not exist
 print(schools["UNC"])

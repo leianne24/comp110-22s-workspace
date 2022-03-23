@@ -83,13 +83,16 @@ def concat(set_one: dict[str, list[str]], set_two: dict[str, list[str]]) -> dict
                 result[column] = result[column] + set_two[column_b]
             else:
                 result[column_b] = set_two[column_b]
-            # will this append value and key?
     return result
 
 
-# def count(values: list[str]) -> dict[str, str]:
-#     """With a list[str] we will get a dictionary where each key is one of the strings, and the value is how many times that key appears."""
-#     result = dict[str,str]
-#     for item in Values
-#         if item 
+def count(values: list[str]) -> dict[str, int]:
+    """With a list[str] we will get a dictionary where each key is one of the strings, and the value is how many times that key appears."""
+    result: dict[str, int] = {}
+    for item in values:
+        if item in result:
+            result[item] += 1
+        else:
+            result[item] = 1
+    return result 
         
