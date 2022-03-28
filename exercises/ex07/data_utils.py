@@ -79,8 +79,10 @@ def concat(set_one: dict[str, list[str]], set_two: dict[str, list[str]]) -> dict
     for column in set_one:
         result[column] = set_one[column]
     for column in set_two:
-        if result == column: 
-            result[column] += set_two[column]
+        if column in result: 
+            # result[column] += set_two[column]
+            for item in set_two[column]:  
+                result[column].append(item)
         else:
             result[column] = set_two[column]
     return result
@@ -95,4 +97,3 @@ def count(values: list[str]) -> dict[str, int]:
         else:
             result[item] = 1
     return result 
-        
