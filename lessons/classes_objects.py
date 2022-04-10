@@ -10,7 +10,7 @@ class Pizza:
     toppings: int
     extra_cheese: bool = False
 
-    def price(self, tax: float) -> float:
+    def price(self) -> float:
         """This will calculate the price of a Pizza."""
         total: float = 0.0
         if self.size == "large": 
@@ -23,7 +23,7 @@ class Pizza:
         if self.extra_cheese:
             total += 1.0
 
-        total += tax
+        # total += tax
 
         return total
 
@@ -34,14 +34,14 @@ class Pizza:
         self.extra_cheese = extra_cheese
 
 
-a_pizza: Pizza = Pizza("large", 3)
+a_pizza: Pizza = Pizza("large", 3, False)
 a_pizza.size = "large"
 a_pizza.toppings = 3
 a_pizza.extra_cheese = False
 print(Pizza)
 print(a_pizza)
 print(a_pizza.size)
-print(f"Price: ${(a_pizza.price(1.05))}")
+print(f"Price: ${(a_pizza.price())}")
 # This is a method call: is it valid?
-
-another_pizza: Pizza = Pizza("small", 0)
+ 
+another_pizza: Pizza = Pizza("small", 0, False)
